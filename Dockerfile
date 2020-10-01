@@ -28,3 +28,7 @@ RUN apt-get install -y srecord
 RUN pip install lizard
 
 RUN apt-get install -y clang
+
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
